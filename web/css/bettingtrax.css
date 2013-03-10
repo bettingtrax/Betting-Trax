@@ -1,0 +1,95 @@
+/* 
+    Document   : bettingtrax
+    Created on : 12/11/2012, 11:14:12 AM
+    Author     : AtweLu01
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+html, body {
+    background-color:   #ffffff;
+    border:             0;
+    display:            block;
+    font-family:        Arial;
+    height:             100%;
+    margin:             0;
+    overflow:           hidden;
+    padding:            0;
+    text-align:         left;
+}
+
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -24px;
+}
+
+#headMenu {
+    background-color:   #003333;
+    height:             18px;
+}
+
+#header {
+    background-color:   #999999;
+    height:             60px;
+}
+
+#login {
+    float:  right;
+    padding-top: 14px;
+}
+
+#username, #password {
+    border: #000000 solid 1px;
+    width:  150px;
+}
+
+#submit {
+    border: #000000 solid 1px;
+    margin-right:   10px;
+    width: 60px;
+}
+
+#forgot {
+    padding-left: 80px
+}
+
+#forgot a:link, #forgot a:visited {
+    font-size: 8pt;
+    color:  #ffffff;
+    text-decoration: none;
+}
+
+#forgot a:hover {
+    font-size: 8pt;
+    color:  #ffffff;
+    text-decoration: underline;
+}
+
+#main {
+}
+
+#sShow {
+    background-color: brown;
+    width: 50%;
+    float: left;
+}
+
+#sShowDetail {
+    background-color: green;
+    width: 50%;
+    float: right;
+    height: auto;
+    height: 100%;
+}
+
+#footer {
+    background-color:   #999999;
+    height:             24px;
+    min-width:          100%;
+    text-align:         center;
+    clear:              both;
+    font-size: 8pt;
+    padding-top: 4px;
+}

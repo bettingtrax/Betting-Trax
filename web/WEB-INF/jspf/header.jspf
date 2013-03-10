@@ -1,0 +1,34 @@
+<%-- any content can be specified here e.g.: --%>
+
+<%@page language="java" contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<jsp:useBean id="user" class="btrax.UserBean" scope="session" />
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/bettingtrax.css" media="screen" />
+        <title>Betting-Trax</title>       
+    </head>
+    <body>
+        <div id="wrapper">
+            <%  
+                user = (btrax.UserBean)session.getAttribute("currentSessionUser"); 
+                                    
+                if (user != null) {
+                    out.println(user.getUsername());
+                    out.println("<a href=\"logout\">Logout</a>");
+                }
+                else {
+            %>
+            <div id="headMenu"></div>
+            <div id="header">
+                    <form id="login" method="post" action="login">
+                        <input id="username" type="text" name="un" placeholder="username" />
+                        <input id="password" type="password" name="pwd" placeholder="password" />
+                        <input id="submit" type="submit" name="submit"  value="login">
+                        <div id="forgot">
+                            <a id="forgot" href="#">Forgot your password?</a>
+                        </div>
+                     </form>
+            </div>
+            <% } %>

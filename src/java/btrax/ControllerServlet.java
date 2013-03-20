@@ -74,7 +74,7 @@ public class ControllerServlet extends HttpServlet {
                 if (session != null) {
                     session.invalidate();
                 }
-                    url = "/index.jsp";            
+                    url = "/WEB-INF/jsp/index.jsp";            
             }
             else {
                 url = "/WEB-INF/view" + userPath + ".jsp";
@@ -116,9 +116,12 @@ public class ControllerServlet extends HttpServlet {
              if (user.isValid()) {
                 HttpSession session = request.getSession(true);
                 session.setAttribute("currentSessionUser",user);
-             }
-
               url = "/WEB-INF/view/home.jsp";
+             }
+             else
+             {
+                 url = "/WEB-INF/jsp/index.jsp";
+             }
         }
         else {
             url = "/WEB-INF/view" + userPath + ".jsp";

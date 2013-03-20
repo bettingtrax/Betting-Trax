@@ -15,12 +15,13 @@
                 user = (btrax.UserBean)session.getAttribute("currentSessionUser"); 
                                     
                 if (user != null) {
-                    out.println(user.getUsername());
-                    out.println("<a href=\"logout\">Logout</a>");
+            %>
+            <a id="headMenu" href="logout">Logout</a>
+            <%
                 }
                 else {
-            %>
-            <div id="headMenu"></div>
+            %>        
+            <div id="headMenu">Login</div>
             <div id="header">
                     <form id="login" method="post" action="login">
                         <input id="username" type="text" name="un" placeholder="username" />

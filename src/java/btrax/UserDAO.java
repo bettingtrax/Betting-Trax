@@ -48,14 +48,14 @@ import java.sql.*;
             
             //if user exists set the isValid variable to true
             else if (more) {
-            //    String firstName = rs.getString("FirstName");
-            //    String lastName = rs.getString("LastName");
+            //String firstName = rs.getString("FirstName");
+            //String lastName = rs.getString("LastName");
                 
-            //    System.out.println("Welcome " + firstName);
+            //System.out.println("Welcome " + firstName);
                 
-            //    bean.setFirstName(firstName);
-            //    bean.setLastName(lastName);
-                bean.setValid(true);
+            //bean.setFirstName(firstName);
+            //bean.setLastName(lastName);
+            bean.setValid(true);
             }
         } catch (Exception ex) {
             System.out.println("Log In failed: An Exception has occurred! " + ex);

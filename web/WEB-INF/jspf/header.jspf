@@ -5,31 +5,43 @@
 <jsp:useBean id="user" class="btrax.UserBean" scope="session" />
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <link rel="stylesheet" type="text/css" href="css/bettingtrax.css" media="screen" />
         <title>Betting-Trax</title>       
     </head>
     <body>
         <div id="wrapper">
-            <%  
-                user = (btrax.UserBean)session.getAttribute("currentSessionUser"); 
+            <nav id="navHeadMenu">
+                <ul>
+                    <%  
+                        user = (btrax.UserBean)session.getAttribute("currentSessionUser"); 
                                     
-                if (user != null) {
-            %>
-            <a id="headMenu" href="logout">Logout</a>
-            <%
-                }
-                else {
-            %>        
-            <div id="headMenu">Login</div>
-            <div id="header">
-                    <form id="login" method="post" action="login">
-                        <input id="username" type="text" name="un" placeholder="username" />
-                        <input id="password" type="password" name="pwd" placeholder="password" />
-                        <input id="submit" type="submit" name="submit"  value="login">
-                        <div id="forgot">
-                            <a id="forgot" href="#">Forgot your password?</a>
+                        if (user != null) {
+                    %>
+                    <li id="navLogout">
+                        <a href="logout">Logout</a>
+                    </li>
+                    <%
+                        }
+                        else {
+                    %>
+                    <li id="navLogin">
+                        <a id="navLoginTrigger" href="#">Login</a>
+                        <div id="navLoginContent">
+                            <form method="post" action="login">
+                                <fieldset id="navLoginInputs">
+                                    <input id="loginUsername" type="text" name="un" placeholder="username" />
+                                    <input id="loginPassword" type="password" name="pwd" placeholder="password" />
+                                </fieldset>
+                                <fieldset id="navLoginActions"
+                                    <input id="loginSubmit" type="submit" name="submit"  value="login">
+                                    <div id="forgot">
+                                        <a id="forgot" href="#">Forgot your password?</a>
+                                    </div>
+                                </fieldset>
+                            </form>
                         </div>
-                     </form>
-            </div>
+                    </li>
+                </ul>
+            </nav>
             <% } %>

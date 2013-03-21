@@ -11,28 +11,41 @@ html, body {
 }
 
 #wrapper {
+    height:     auto !important;
+    height:     100%;
+    margin:     0 auto -24px;
     min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -24px;
 }
 
-#headMenu {
+#navHeadMenu ul {
     background-color:   #003333;
     color:              #ffffff;
+    float:              left;
     font-size:          8pt;
     height:             18px;
-    text-decoration:    none;
+    list-style:         none;
+    margin:             0;
+    padding:            0;
+    position:           relative;
+    width:              100%;
 }
 
-#header {
-    background-color:   #999999;
-    height:             60px;
+#navHeadMenu li {
+    float: left;
 }
 
-#login {
-    float:  right;
-    padding-top: 14px;
+#navLoginTrigger {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    height: 100%;
+    line-height: 100%;
+    font-weight: bold;
+    padding: 0;
+    text-decoration: none;
+}
+#navLoginContent {
+    display: none;
 }
 
 #username, #password {
@@ -74,7 +87,7 @@ html, body {
 #sShowDetail {
     background-color: green;
     width: 50%;
-    float: right;
+    float: left;
     height: auto;
     height: 100%;
 }
